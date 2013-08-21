@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>{{ page.title }} &middot; {{ site.name }}</title>
+    <link rel="stylesheet" href="/css/syntax.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="alternate" href="/atom.xml" type="application/atom+xml" title="{{ site.name }}" />
+  </head>
+
+  <body>
+    <div id="header">
+      <ul id="site-nav" class="clearfix">
+        <li><a href="/">Posts</a></li>
+        <li><a href="/code/">Code</a></li>
+        <li><a href="/talks/">Talks</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+
+    <div id="main"{% if page.class %} class="{{ page.class }}"{% endif %}>
+      <div class="clearfix">
+        {{ content }}
+      </div>
+    </div>
+
+    <div id="footer">
+      Copyright Michael Parker. Follow me on
+      <a href="https://github.com/mgp"><img src="/assets/images/follow-github.png" /></a> or
+      <a href="http://gplus.to/omgitsmgp"><img src="/assets/images/follow-google-plus.png" /></a> or
+      <a href="https://twitter.com/omgitsmgp"><img src="/assets/images/follow-twitter-light-bg.png" class="last" /></a>.
+    </div>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29153096-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
+

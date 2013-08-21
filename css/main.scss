@@ -1,0 +1,283 @@
+/* reset from tom.css */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+
+/* Clearfix hack from http://css-tricks.com/snippets/css/clear-fix/ */
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* html .clearfix { zoom: 1; }  // IE6
+*:first-child + html .clearfix { zoom: 1; }  // IE7
+
+/* mgp.css */
+
+$site-width: 920px;
+$font-size: 140%;
+$highlight-color: #F54828;
+
+@font-face {
+  font-family: 'Fanwood';
+  src: url('/assets/Fanwood.otf');
+}
+
+%highlighted {
+  color: $highlight-color;
+}
+%bolded {
+  font-weight: bold;
+}
+%padded-text {
+  margin-top: 0.75em;
+}
+%padded-section {
+  padding: 1em 0;
+}
+
+h1 {
+  @extend %highlighted;
+  @extend %bolded;
+  font-size: 1.5em;
+}
+h2 {
+  @extend %highlighted;
+  @extend %bolded;
+  font-size: 1.25em;
+}
+h3, h4, h5, h6 {
+  @extend %highlighted;
+  @extend %bolded;
+  font-size: 1em;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  background-image: url('/assets/images/bg/tex2res4-dark.png');
+  font-family: 'Fanwood', serif;
+  font-size: $font-size;
+  line-height: 1.4;
+}
+
+%section-list {
+  $section-list-padding: 0.75em;
+
+  ul {
+    list-style-type: none;
+
+    li {
+      .title {
+        @extend %bolded;
+      }
+
+      p {
+        margin-top: 0.25em;
+      }
+
+      & + li {
+        @extend %padded-text;
+      }
+    }
+  }
+}
+
+#header {
+  @extend %padded-section;
+  text-align: center;
+
+  #site-nav {
+    list-style-type: none;
+    font-size: 1.5em;
+
+    li {
+      display: inline;
+
+      & + li {
+        padding-left: 1em;
+      }
+
+      a {
+        $left-right-padding: 0.25em;
+        padding: 0.2em $left-right-padding 0 $left-right-padding;
+      }
+      a, a:visited {
+        @extend %highlighted;
+      }
+      a:hover {
+        border-radius: 0.2em;
+        background-color: $highlight-color;
+        color: black;
+      }
+    }
+  }
+}
+
+#main {
+  clear: both;
+  color: #444;
+  background-color: #fffcfa;
+
+  a, a:visited {
+    color: #4183c4;
+  }
+  a:hover {
+    background-color: yellow;
+    color: black;
+  }
+
+  * + p, * + ul, * + ol, * + div.highlight, * + blockquote, * + h2, * + h3, * + h4 {
+    @extend %padded-text;
+  }
+
+  li + li {
+    margin-top: 0.25em;
+  }
+
+  & > div {
+    @extend %padded-section;
+    text-align: left;
+    width: $site-width;
+    margin: 0 auto;
+  }
+
+  &.about {
+    img {
+      float: left;
+      $image-width: 400px;
+
+      & + div {
+        margin-left: $image-width;
+      }
+    }
+  }
+
+  &.post {
+    $code-font-size: 0.75em;
+    $code-bg-color: #eef;
+    $code-border-color: #ddd;
+
+    p.meta {
+      @extend %bolded;
+      margin-top: 0.25em;
+    }
+
+    blockquote, ul, ol {
+      margin-left: 1em;
+    }
+
+    %code {
+      border: 1px solid $code-border-color;
+      background-color: $code-bg-color;
+    }
+
+    code {
+      @extend %code;
+      font-size: $code-font-size;
+      padding: 0 0.25em;
+    }
+
+    pre {
+      @extend %code;
+      padding: 0.5em;
+      line-height: 1.2;
+
+      code {
+        border: 0;
+        padding: 0;
+      }
+    }
+
+    %post-footer {
+      margin-top: 1.5em;
+    }
+
+    #post-nav {
+      @extend %post-footer;
+
+      a.prev {
+        float: left;
+      }
+      a.next {
+        float: right;
+      }
+    }
+
+    #disqus_thread {
+      @extend %post-footer;
+    }
+  }
+
+  &.posts {
+    %date-column {
+      width: 350px;
+    }
+
+    h2 {
+      @extend %date-column;
+      text-align: right;
+    }
+
+    li {
+      list-style-type: none;
+
+      span.date {
+        @extend %date-column;
+        display: inline-block;
+        text-align: right;
+        margin-right: 0.5em;
+      }
+    }
+  }
+
+  &.code {
+    @extend %section-list;
+
+    li {
+      margin-left: 1em;
+    }
+  }
+
+  &.talks {
+    @extend %section-list;
+
+    li {
+      img {
+        float: left;
+        $image-width: 200px;
+        margin-top: 0.25em;
+
+        & + div {
+          margin-left: $image-width;
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  @extend %padded-section;
+  @extend %highlighted;
+  clear: both;
+  text-align: center;
+
+  img {
+    margin: 0 0.25em;
+    margin-bottom: -4px;
+
+    &.last {
+      margin-right: 0;
+    }
+  }
+}
+

@@ -1,0 +1,146 @@
+/* reset from tom.css */
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100%; }
+
+/* Clearfix hack from http://css-tricks.com/snippets/css/clear-fix/ */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* html .clearfix {
+  zoom: 1; }
+
+*:first-child + html .clearfix {
+  zoom: 1; }
+
+/* mgp.css */
+@font-face {
+  font-family: 'Fanwood';
+  src: url("/assets/Fanwood.otf"); }
+
+h1, h2, h3, h4, h5, h6, #header #site-nav li a, #header #site-nav li a:visited, #footer {
+  color: #f54828; }
+
+h1, h2, h3, h4, h5, h6, #main.code ul li .title, #main.talks ul li .title, #main.post p.meta {
+  font-weight: bold; }
+
+#main.code ul li + li, #main.talks ul li + li, #main * + p, #main * + ul, #main * + ol, #main * + div.highlight, #main * + blockquote, #main * + h2, #main * + h3, #main * + h4 {
+  margin-top: 0.75em; }
+
+#header, #main > div, #footer {
+  padding: 1em 0; }
+
+h1 {
+  font-size: 1.5em; }
+
+h2 {
+  font-size: 1.25em; }
+
+h3, h4, h5, h6 {
+  font-size: 1em; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background-image: url("/assets/images/bg/tex2res4-dark.png");
+  font-family: 'Fanwood', serif;
+  font-size: 140%;
+  line-height: 1.4; }
+
+#main.code ul, #main.talks ul {
+  list-style-type: none; }
+  #main.code ul li p, #main.talks ul li p {
+    margin-top: 0.25em; }
+
+#header {
+  text-align: center; }
+  #header #site-nav {
+    list-style-type: none;
+    font-size: 1.5em; }
+    #header #site-nav li {
+      display: inline; }
+      #header #site-nav li + li {
+        padding-left: 1em; }
+      #header #site-nav li a {
+        padding: 0.2em 0.25em 0 0.25em; }
+      #header #site-nav li a:hover {
+        border-radius: 0.2em;
+        background-color: #f54828;
+        color: black; }
+
+#main {
+  clear: both;
+  color: #444;
+  background-color: #fffcfa; }
+  #main a, #main a:visited {
+    color: #4183c4; }
+  #main a:hover {
+    background-color: yellow;
+    color: black; }
+  #main li + li {
+    margin-top: 0.25em; }
+  #main > div {
+    text-align: left;
+    width: 920px;
+    margin: 0 auto; }
+  #main.about img {
+    float: left; }
+    #main.about img + div {
+      margin-left: 400px; }
+  #main.post p.meta {
+    margin-top: 0.25em; }
+  #main.post blockquote, #main.post ul, #main.post ol {
+    margin-left: 1em; }
+  #main.post code, #main.post pre {
+    border: 1px solid #dddddd;
+    background-color: #eeeeff; }
+  #main.post code {
+    font-size: 0.75em;
+    padding: 0 0.25em; }
+  #main.post pre {
+    padding: 0.5em;
+    line-height: 1.2; }
+    #main.post pre code {
+      border: 0;
+      padding: 0; }
+  #main.post #post-nav, #main.post #disqus_thread {
+    margin-top: 1.5em; }
+  #main.post #post-nav a.prev {
+    float: left; }
+  #main.post #post-nav a.next {
+    float: right; }
+  #main.posts h2, #main.posts li span.date {
+    width: 350px; }
+  #main.posts h2 {
+    text-align: right; }
+  #main.posts li {
+    list-style-type: none; }
+    #main.posts li span.date {
+      display: inline-block;
+      text-align: right;
+      margin-right: 0.5em; }
+  #main.code li {
+    margin-left: 1em; }
+  #main.talks li img {
+    float: left;
+    margin-top: 0.25em; }
+    #main.talks li img + div {
+      margin-left: 200px; }
+
+#footer {
+  clear: both;
+  text-align: center; }
+  #footer img {
+    margin: 0 0.25em;
+    margin-bottom: -4px; }
+    #footer img.last {
+      margin-right: 0; }

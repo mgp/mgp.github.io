@@ -1,0 +1,223 @@
+<html>
+<head>
+  <title>Resume - Michael G. Parker</title>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Vollkorn">
+  <style type="text/css">
+    /* "css reset" by Eric Meyer */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+      display: block;
+    }
+    body {
+      line-height: 1;
+    }
+    ol, ul {
+      list-style: none;
+    }
+    blockquote, q {
+      quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+      content: '';
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    /* "easy clearing method" by Tony Aslett */
+    .clear:after {
+      content: ".";
+      display: block;
+      height: 0;
+      font-size: 0;
+      clear: both;
+      visibility: hidden;
+    }
+    .clear {
+      min-height: 1px;
+    }
+    * html .clear {
+      height: 1px;
+    }
+    /* resume styles */
+    #container {
+      font-family: 'Vollkorn';
+      width: 760px;
+      margin: 0 auto;
+      line-height: 120%;
+      margin: 0.5em auto;
+    }
+    #container > div + div {
+      margin-top: 0.8em;
+    }
+    h1 {
+      font-size: 1.5em;
+      margin-bottom: 0.3em;
+      border-bottom: 1px solid black;
+    }
+    h2 {
+      font-size: 1.2em;
+      margin-bottom: 0.15em;
+    }
+    h3 {
+      font-weight: bold;
+    }
+    #address {
+      float: left;
+    }
+    #contact {
+      text-align: right;
+      float: right;
+    }
+    #employment ol > li + li {
+      margin-top: 0.5em;
+    }
+    #employment ul,
+    #education ul,
+    #code ul {
+      list-style-type: square;
+      list-style-position: outside;
+    }
+    #code ul > ul {
+      list-style-type: circle;
+    }
+    #employment ul > li,
+    #education ul > li,
+    #code ul > li {
+      margin-left: 1.5em;
+    }
+    #code ul > ul li {
+      margin-left: 3em;
+    }
+    span.time {
+      float: right;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container">
+  <div id="header" class="clear">
+    <h1>Michael Parker</h1>
+    <div id="address">
+      <!-- <br /> -->
+    </div>
+    <div id="contact">
+      <!-- <br /> -->
+      michael.g.parker@gmail.com
+    </div>
+  </div>
+
+  <div id="objective" class="clear">
+    <h1>Objective</h1>
+    <p>To design and code interesting and useful things. Really.</p>
+  </div>
+
+  <div id="employment" class="clear">
+    <h1>Employment</h1>
+
+    <ol>
+      <li>
+        <h2>Ad Hoc Labs, Lead Developer <span class="time">March 2012 - present</span></h2>
+        <ul>
+          <li>Coming soon.</li>
+        </ul> 
+      </li>
+
+      <li>
+        <h2>ReadyUp!, Co-founder & Developer <span class="time">January 2011 - present</span></h2>
+        <ul>
+          <li>Performed usability tests with a dozen people and incorporated feedback into product design.</li>
+          <li>Designed the end-to-end architecture and wire protocol between the iPhone client, frontend, and backend.</li>
+          <li>Wrote almost the entire iPhone application, including all view controllers, the SQL storage layer, and the real-time, long-polling network layer. (36478 LoC, 5639 test LoC)</li>
+          <li>Wrote and open sourced Pike, a message-level RPC library atop the I/O loop from the Tornado web server.</li>
+          <li>Wrote the storage layer on top of Redis for the backend process. (2495 LoC, 5338 test LoC)</li>
+        </ul> 
+      </li>
+
+      <li>
+        <h2>Google, Software Engineer <span class="time">July 2006 - January 2011</span></h2>
+        <h3>Google Search Appliance Search Quality</h3>
+        <ul>
+          <li>Wrote and open sourced Side-by-Side for Enterprise, a tool for allowing users to evaluate which of two scoring policies or ranking functions is better by comparing their results side-by-side.</li>
+          <li>Designed and implemented alternative implementations of the Google spelling corrector's data structures and combined all spelling processes into one, thereby reducing memory usage by over 60%.</li>
+          <li>Rewrote the spelling pipeline, or the process by which the GSA learns new words that are not part of its standard dictionary, to eliminate many embarrassing anomalies.</li>
+          <li>Improved maintainability and increased test coverage of code adopted from the "Google 1.0" era.</li>
+        </ul>
+        <h3>Google Docs Backend</h3>
+        <ul>
+          <li>Implemented sharing in Google Docs where only users with a private key can access an item.</li>
+          <li>Pager duty and production work, including migrating all data in Google Docs to a new data center.</li>
+        </ul>
+        <h3>Other</h3>
+        <ul>
+          <li>Interviewed over 175 candidates.</li>
+          <li>Co-organized the "Noogler intergrouplet" that helped onboard new-hires in Santa Monica.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <div id="languages">
+    <h1>Languages and Technologies</h1>
+    <p>Fluent in Objective C, Python, Java, and C++. Conversational in HTML/CSS, Javascript, and jQuery. Proficient with Redis, SQL, AFNetworking, Tornado web server, Git, and unit testing.</p>
+  </div>
+
+  <div id="education">
+    <h1>Education</h1>
+    <ul>
+      <li>
+        <div>
+          <span>BS with Honors, Computer Science and Engineering, UCLA</span>
+          <span class="time">2000 - 2004</span>
+        </div>
+        <span>GPA 3.6/4.0, Minor in Mathematics, Golden Key Honor Society member</span>
+      </li>
+      <li>
+        <div>
+          <span>MS, Computer Science, UCLA</span>
+          <span class="time">2004 - 2006</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div id="code">
+    <h1>Open Source Software</h1>
+    <ul>
+      <li>Side-by-Side (http://code.google.com/p/sxse): Tool for comparing GSA search results side-by-side.</li>
+      <li>Selected code from https://github.com/mgp:</li>
+      <ul>
+        <li>Blackjack Analyst: Java simulator for evaluating different blackjack playing strategies.</li>
+        <li>CannedHTTP: Python program for verifying the correctness of HTTP requests and issuing canned responses.</li>
+        <li>Loco: iOS library to passively update the device location via GPS while conserving battery.</li>
+        <li>Pike: Python library providing message-level semantics for sockets.</li>
+      </ul>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
