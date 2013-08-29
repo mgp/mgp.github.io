@@ -3,6 +3,7 @@ base_url: http://omgitsmgp.com
 markdown: redcarpet
 pygments: true
 permalink: pretty
+enable_disqus: true
 
 redcarpet:
   extensions: [no_intra_emphasis, autolink, strikethrough, superscript, underline, smart]
