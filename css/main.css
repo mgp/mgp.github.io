@@ -112,8 +112,8 @@ body {
     #main.post pre code {
       border: 0;
       padding: 0; }
-  #main.post #post-nav, #main.post #disqus_thread {
-    margin-top: 1.5em; }
+  #main.post #post-share, #main.post #post-nav, #main.post #disqus_thread {
+    margin-top: 1.25em; }
   #main.post #post-nav a.prev {
     float: left; }
   #main.post #post-nav a.next {

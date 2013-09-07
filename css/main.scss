@@ -199,7 +199,11 @@ body {
     }
 
     %post-footer {
-      margin-top: 1.5em;
+      margin-top: 1.25em;
+    }
+
+    #post-share {
+      @extend %post-footer;
     }
 
     #post-nav {
