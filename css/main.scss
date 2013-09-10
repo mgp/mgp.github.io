@@ -27,8 +27,12 @@ $font-size: 140%;
 $highlight-color: #F54828;
 
 @font-face {
-  font-family: 'Fanwood';
-  src: url('/assets/Fanwood.otf');
+  font-family: "Crimson";
+  src: url('/assets/Crimson-Roman.ttf');
+}
+@font-face {
+  font-family: "UbuntuMono";
+  src: url('/assets/UbuntuMono-Regular.ttf');
 }
 
 %highlighted {
@@ -65,7 +69,7 @@ a {
 
 body {
   background-image: url('/assets/images/bg/tex2res4-dark.png');
-  font-family: 'Fanwood', serif;
+  font-family: "Crimson", Georgia, serif;
   font-size: $font-size;
   line-height: 1.4;
 }
@@ -108,8 +112,7 @@ body {
       }
 
       a {
-        $left-right-padding: 0.25em;
-        padding: 0.2em $left-right-padding 0 $left-right-padding;
+        padding: 0.1em 0.25em;
       }
       a, a:visited {
         @extend %highlighted;
@@ -163,7 +166,7 @@ body {
   }
 
   &.post {
-    $code-font-size: 0.75em;
+    $code-font-size: 0.8em;
     $code-bg-color: #eef;
     $code-border-color: #ddd;
 
@@ -179,6 +182,7 @@ body {
     %code {
       border: 1px solid $code-border-color;
       background-color: $code-bg-color;
+      font-family: "UbuntuMono", "Courier New", Courier, monospace;
     }
 
     code {
@@ -190,7 +194,7 @@ body {
     pre {
       @extend %code;
       padding: 0.5em;
-      line-height: 1.2;
+      line-height: 1.1;
 
       code {
         border: 0;

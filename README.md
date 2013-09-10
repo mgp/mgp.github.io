@@ -14,7 +14,7 @@ Run [Jekyll](http://jekyllrb.com/) to serve the site locally:
 jekyll serve --watch --drafts --config=_config.yml,_local_config.yml
 ```
 
-The font is [Fanwood](http://www.theleagueofmoveabletype.com/fanwood) from [The League of Moveable Type](http://www.theleagueofmoveabletype.com/).
+The fonts are [Crimson](http://www.fontsquirrel.com/fonts/crimson) and [Ubuntu Mono](http://www.fontsquirrel.com/fonts/ubuntu-mono).
 
 The background image is a darkened version of [Tex2res4](http://subtlepatterns.com/tex2res4/) from [Subtle Patterns](http://subtlepatterns.com/).
 

@@ -23,8 +23,12 @@ html, body {
 
 /* mgp.css */
 @font-face {
-  font-family: 'Fanwood';
-  src: url("/assets/Fanwood.otf"); }
+  font-family: "Crimson";
+  src: url("/assets/Crimson-Roman.ttf"); }
+
+@font-face {
+  font-family: "UbuntuMono";
+  src: url("/assets/UbuntuMono-Regular.ttf"); }
 
 h1, h2, h3, h4, h5, h6, #header #site-nav li a, #header #site-nav li a:visited, #footer {
   color: #f54828; }
@@ -52,7 +56,7 @@ a {
 
 body {
   background-image: url("/assets/images/bg/tex2res4-dark.png");
-  font-family: 'Fanwood', serif;
+  font-family: "Crimson", Georgia, serif;
   font-size: 140%;
   line-height: 1.4; }
 
@@ -71,7 +75,7 @@ body {
       #header #site-nav li + li {
         padding-left: 1em; }
       #header #site-nav li a {
-        padding: 0.2em 0.25em 0 0.25em; }
+        padding: 0.1em 0.25em; }
       #header #site-nav li a:hover {
         border-radius: 0.2em;
         background-color: #f54828;
@@ -102,13 +106,14 @@ body {
     margin-left: 1em; }
   #main.post code, #main.post pre {
     border: 1px solid #dddddd;
-    background-color: #eeeeff; }
+    background-color: #eeeeff;
+    font-family: "UbuntuMono", "Courier New", Courier, monospace; }
   #main.post code {
-    font-size: 0.75em;
+    font-size: 0.8em;
     padding: 0 0.25em; }
   #main.post pre {
     padding: 0.5em;
-    line-height: 1.2; }
+    line-height: 1.1; }
     #main.post pre code {
       border: 0;
       padding: 0; }
