@@ -92,7 +92,7 @@ Following the preamble should be one or more service entries, each containing it
 Each service entry starts with `check [type] [identifier]`, where:
 
 * `type` specifies the type of resource that Monit should monitor, such as `process` for a process, `host` for the connection to a remote host, and so on.
-* `name` is a unique identifier for this service entry, used in the web interface and included in any alert messages delivered via email.
+* `identifier` is a unique identifier for this service entry, used in the web interface and included in any alert messages delivered via email.
 
 An entry restricts the service tests defined inside of it to those that are meaningful for its resource. Each service test has the form `if [body] then [action]`, where:
 
