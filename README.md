@@ -18,6 +18,8 @@ The fonts are [Crimson](http://www.fontsquirrel.com/fonts/crimson) and [Ubuntu M
 
 The background image is a darkened version of [Tex2res4](http://subtlepatterns.com/tex2res4/) from [Subtle Patterns](http://subtlepatterns.com/).
 
+The favicon is my [GitHub identicon](https://identicons.github.com/mgp.png).
+
 ### License
 
 The following directories and their contents are copyright Michael Parker. You may not reuse anything therein without my permission:
