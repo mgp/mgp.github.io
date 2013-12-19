@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>Resume - Michael G. Parker</title>
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Vollkorn">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Vollkorn">
   <style type="text/css">
     /* "css reset" by Eric Meyer */
     html, body, div, span, applet, object, iframe,
@@ -30,6 +30,8 @@
     }
     body {
       line-height: 1;
+      /* Tweak this to fit on page for printing. */
+      /* font-size: 100%; */
     }
     ol, ul {
       list-style: none;
@@ -91,10 +93,11 @@
       text-align: right;
       float: right;
     }
-    #employment ol > li + li {
+    #experience ol > li + li {
       margin-top: 0.5em;
     }
-    #employment ul,
+    #experience ul,
+    #extracurriculars ul,
     #education ul,
     #code ul {
       list-style-type: square;
@@ -103,7 +106,8 @@
     #code ul > ul {
       list-style-type: circle;
     }
-    #employment ul > li,
+    #experience ul > li,
+    #extracurriculars ul > li,
     #education ul > li,
     #code ul > li {
       margin-left: 1.5em;
@@ -114,6 +118,9 @@
     span.time {
       float: right;
     }
+    #coding-in-the-real-world {
+      font-style: italic;
+    }
   </style>
 </head>
 <body>
@@ -121,68 +128,75 @@
 <div id="container">
   <div id="header" class="clear">
     <h1>Michael Parker</h1>
-    <div id="address">
-      <!-- <br /> -->
-    </div>
     <div id="contact">
-      <!-- <br /> -->
-      michael.g.parker@gmail.com
+      <a href="http://omgitsmgp.com">http://omgitsmgp.com</a>
     </div>
   </div>
 
   <div id="objective" class="clear">
     <h1>Objective</h1>
-    <p>To design and code interesting and useful things. Really.</p>
+    <p>To collaborate with talented engineers, and to develop products that I am passionate about.</p>
   </div>
 
-  <div id="employment" class="clear">
-    <h1>Employment</h1>
+  <div id="experience" class="clear">
+    <h1>Experience</h1>
 
     <ol>
       <li>
-        <h2>Ad Hoc Labs, Lead Developer <span class="time">March 2012 - present</span></h2>
+        <h2><a href="https://leanpub.com/coding-in-the-real-world/" id="coding-in-the-real-world">Coding in the Real World</a>, Author <span class="time">June 2013 - Present</span></h2>
         <ul>
-          <li>Coming soon.</li>
-        </ul> 
+          <li>Writing a book to bridge the gap between a CS degree and industry. Coming soon.</li>
+        </ul>
       </li>
 
       <li>
-        <h2>ReadyUp!, Co-founder & Developer <span class="time">January 2011 - present</span></h2>
+        <h2><a href="http://burnerapp.com/">Burner</a>, Lead Developer <span class="time">March 2012 - May 2013</span></h2>
         <ul>
-          <li>Performed usability tests with a dozen people and incorporated feedback into product design.</li>
-          <li>Designed the end-to-end architecture and wire protocol between the iPhone client, frontend, and backend.</li>
-          <li>Wrote almost the entire iPhone application, including all view controllers, the SQL storage layer, and the real-time, long-polling network layer. (36478 LoC, 5639 test LoC)</li>
-          <li>Wrote and open sourced Pike, a message-level RPC library atop the I/O loop from the Tornado web server.</li>
-          <li>Wrote the storage layer on top of Redis for the backend process. (2495 LoC, 5338 test LoC)</li>
-        </ul> 
+          <li>Productionized the Python backend, increasing its test coverage from 0 to over 90%. Also handled on-call duties and performed basic administration.</li>
+          <li>Developed <a href="https://play.google.com/store/apps/details?id=com.adhoclabs.burner">Burner for Android</a>. It has over 100,000 installs, and <a href="http://arstechnica.com/gadgets/2013/04/get-a-disposable-number-for-android-with-the-new-burner-app/">Ars Technica</a>, <a href="http://lifehacker.com/5994262/burner-brings-disposable-phone-numbers-to-android-for-private-calls-texts-and-more">Lifehacker</a>, and <a href="http://gizmodo.com/5994268/burner-the-single+serving-phone-number-app-is-now-for-android">Gizmodo</a> covered its release.
+          <li>Open sourced <a href="https://github.com/mgp/iron-cushion">Iron Cushion</a>, a CouchDB benchmark and load test. Also developed anti-DoS measures, an abuse monitor, and a real-time stats dashboard using Redis.</li>
+        </ul>
       </li>
 
       <li>
-        <h2>Google, Software Engineer <span class="time">July 2006 - January 2011</span></h2>
-        <h3>Google Search Appliance Search Quality</h3>
+        <h2><a href="http://www.readyupapp.com/">ReadyUp!</a>, Co-founder & Developer <span class="time">January 2011 - February 2012</span></h2>
         <ul>
-          <li>Wrote and open sourced Side-by-Side for Enterprise, a tool for allowing users to evaluate which of two scoring policies or ranking functions is better by comparing their results side-by-side.</li>
-          <li>Designed and implemented alternative implementations of the Google spelling corrector's data structures and combined all spelling processes into one, thereby reducing memory usage by over 60%.</li>
-          <li>Rewrote the spelling pipeline, or the process by which the GSA learns new words that are not part of its standard dictionary, to eliminate many embarrassing anomalies.</li>
+          <li>Developed the iPhone application, including the SQL storage layer and the real-time, long-polling network layer.</li>
+          <li>Developed the backend in Python, storing data in Redis.</li>
+          <li>Open sourced <a href="https://github.com/mgp/pike">Pike</a>, a message-level RPC library on top of the I/O loop from the Tornado web server.</li>
+        </ul>
+      </li>
+
+      <li>
+        <h2><a href="https://www.google.com/">Google</a>, Software Engineer <span class="time">July 2006 - January 2011</span></h2>
+        <h3><a href="http://www.google.com/enterprise/search/products/gsa.html">Google Search Appliance</a> Search Quality</h3>
+        <ul>
+          <li>Open sourced <a href="http://code.google.com/p/sxse">Side-by-Side for Enterprise</a>, a tool for evaluating scoring policies or ranking functions by comparing their results side-by-side.</li>
+          <li>Rewrote the spelling correction pipeline. In C++, designed and implemented alternative data structures and combined all processes into one, thereby reducing memory usage by over 60%.</li>
           <li>Improved maintainability and increased test coverage of code adopted from the "Google 1.0" era.</li>
         </ul>
-        <h3>Google Docs Backend</h3>
+        <h3><a href="https://docs.google.com">Google Docs</a> Backend</h3>
         <ul>
           <li>Implemented sharing in Google Docs where only users with a private key can access an item.</li>
           <li>Pager duty and production work, including migrating all data in Google Docs to a new data center.</li>
-        </ul>
-        <h3>Other</h3>
-        <ul>
-          <li>Interviewed over 175 candidates.</li>
-          <li>Co-organized the "Noogler intergrouplet" that helped onboard new-hires in Santa Monica.</li>
         </ul>
       </li>
     </ol>
   </div>
 
+  <div id="extracurriculars">
+    <h1>Cross-discipline and extracurriculars</h1>
+    <ul>
+      <li>Founding volunteer of <a href="http://www.projectpossibility.org/">Project:Possibility</a>, through which I've <a href="http://www.nytimes.com/2008/12/18/business/smallbusiness/18edge.html">mentored hundreds of college students</a> writing software to improve the lives of the physically disabled.</li>
+      <li>Presented on <a href="http://omgitsmgp.com/talks/couchdb-la-hn.pdf">CouchDB</a>, <a href="http://omgitsmgp.com/talks/redis-la-hn.pdf">Redis</a>, and <a href="http://omgitsmgp.com/talks/cs4hs-app-engine.pdf">Google App Engine</a>. Also written many <a href="http://omgitsmgp.com/">technical blog posts</a>.
+      <li>At Google, interviewed over 175 candidates and co-organized the local "Noogler intergrouplet."</li>
+      <!-- <li>Member of UCLA computer science alumni advisory board.</li> -->
+    </ul>
+  </div>
+
   <div id="languages">
-    <h1>Languages and Technologies</h1>
-    <p>Fluent in Objective C, Python, Java, and C++. Conversational in HTML/CSS, Javascript, and jQuery. Proficient with Redis, SQL, AFNetworking, Tornado web server, Git, and unit testing.</p>
+    <h1>Languages and technologies</h1>
+    <p>Fluent in Python, Java, programmatic testing, Redis, Git, Flask, and SQLAlchemy. Once fluent in Objective-C and C++. Conversational in HTML, CSS, Sass, jQuery, Javascript, and CoffeeScript.</p>
   </div>
 
   <div id="education">
@@ -205,16 +219,15 @@
   </div>
 
   <div id="code">
-    <h1>Open Source Software</h1>
+    <h1>Open-source software</h1>
     <ul>
-      <li>Side-by-Side (http://code.google.com/p/sxse): Tool for comparing GSA search results side-by-side.</li>
-      <li>Selected code from https://github.com/mgp:</li>
+      <li>Selected code from <a href="https://github.com/mgp/">https://github.com/mgp</a>:</li>
       <ul>
-        <li>Blackjack Analyst: Java simulator for evaluating different blackjack playing strategies.</li>
-        <li>CannedHTTP: Python program for verifying the correctness of HTTP requests and issuing canned responses.</li>
-        <li>Loco: iOS library to passively update the device location via GPS while conserving battery.</li>
-        <li>Pike: Python library providing message-level semantics for sockets.</li>
+        <li><a href="https://github.com/mgp/iron-cushion">Iron Cushion</a>, a benchmark and load test for CouchDB.</li>
+        <li><a href="https://github.com/mgp/loco">Loco</a>, an iOS library to passively update the device location using GPS while conserving battery.</li>
+        <li><a href="https://github.com/mgp/blackjack-analyst">Blackjack Analyst</a>, a simulator for evaluating different blackjack playing strategies.</li>
       </ul>
+      <li><a href="http://code.google.com/p/sxse">Side-by-Side for Enterprise</a>, a tool for comparing GSA search results side-by-side.</li>
     </ul>
   </div>
 </div>
