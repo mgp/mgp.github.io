@@ -10,28 +10,30 @@
     <link rel="alternate" href="/atom.xml" type="application/atom+xml" title="{{ site.name }}" />
   </head>
 
-  <body>
-    <div id="header">
-      <ul id="site-nav" class="clearfix">
-        <li><a href="/">Posts</a></li>
-        <li><a href="/code/">Code</a></li>
-        <li><a href="/talks/">Talks</a></li>
-        <li><a href="/about/">About</a></li>
-      </ul>
-    </div>
+  <body{% if page.class %} class="{{ page.class }}"{% endif %}>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/" class="posts">Posts</a></li>
+          <li><a href="/code/" class="code">Code</a></li>
+          <li><a href="/talks/" class="talks">Talks</a></li>
+          <li><a href="/about/" class="about">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <div id="main"{% if page.class %} class="{{ page.class }}"{% endif %}>
+    <main>
       <div class="clearfix">
         {{ content }}
       </div>
-    </div>
+    </main>
 
-    <div id="footer">
+    <footer>
       Copyright Michael Parker. Follow me on
       <a href="https://github.com/mgp"><img src="/assets/images/follow-github.png" /></a> or
       <a href="http://gplus.to/omgitsmgp"><img src="/assets/images/follow-google-plus.png" /></a> or
       <a href="https://twitter.com/omgitsmgp"><img src="/assets/images/follow-twitter-light-bg.png" class="last" /></a>.
-    </div>
+    </footer>
 
     {% if site.enable_analytics %}
       <script type="text/javascript">

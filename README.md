@@ -1,6 +1,4 @@
-Source for http://mgp.github.io/.
-
-### Notes
+Source for my [blog](http://mgp.github.io/).
 
 Use [Sass](http://sass-lang.com/) to generate the stylesheet from `css/main.scss`:
 
@@ -14,9 +12,12 @@ Run [Jekyll](http://jekyllrb.com/) to serve the site locally:
 jekyll serve --watch --drafts --config=_config.yml,_local_config.yml
 ```
 
-The fonts are [Crimson](http://www.fontsquirrel.com/fonts/crimson) and [Ubuntu Mono](http://www.fontsquirrel.com/fonts/ubuntu-mono).
+### Styling
 
-The background image is a darkened version of [Tex2res4](http://subtlepatterns.com/tex2res4/) from [Subtle Patterns](http://subtlepatterns.com/).
+The fonts are [League Gothic](https://www.theleagueofmoveabletype.com/league-gothic), [Crimson](http://www.fontsquirrel.com/fonts/crimson), and [Ubuntu Mono](http://www.fontsquirrel.com/fonts/ubuntu-mono).
+
+The color palette in the navigation header is [DANCE TO THE
+CHARTS](http://www.colourlovers.com/palette/160924/DANCE_TO_THE_CHARTS).
 
 The favicon is my [GitHub identicon](https://identicons.github.com/mgp.png).
 

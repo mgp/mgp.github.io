@@ -24,8 +24,27 @@ html, body { height: 100%; }
 
 $site-width: 920px;
 $font-size: 140%;
-$highlight-color: #F54828;
+$text-color: #444;
+$footer-darken-pct: 42%;
+$main-background-color: #fefefe;
+$header-background-color: #f5f5f5;
 
+$purple-color: #C23DFF;
+$blue-color: #45E0D3;
+$green-color: #B7F731;
+$orange-color: #FFC226;
+$red-color: #FF297E;
+
+$posts-color: $purple-color;
+$book-color: $blue-color;
+$code-color: $green-color;
+$talks-color: $orange-color;
+$about-color: $red-color;
+
+@font-face {
+  font-family: "LeagueGothic";
+  src: url('/assets/LeagueGothic-Regular.otf');
+}
 @font-face {
   font-family: "Crimson";
   src: url('/assets/Crimson-Roman.ttf');
@@ -35,9 +54,6 @@ $highlight-color: #F54828;
   src: url('/assets/UbuntuMono-Regular.ttf');
 }
 
-%highlighted {
-  color: $highlight-color;
-}
 %bolded {
   font-weight: bold;
 }
@@ -49,17 +65,14 @@ $highlight-color: #F54828;
 }
 
 h1 {
-  @extend %highlighted;
   @extend %bolded;
   font-size: 1.5em;
 }
 h2 {
-  @extend %highlighted;
   @extend %bolded;
   font-size: 1.25em;
 }
 h3, h4, h5, h6 {
-  @extend %highlighted;
   @extend %bolded;
   font-size: 1em;
 }
@@ -68,7 +81,6 @@ a {
 }
 
 body {
-  background-image: url('/assets/images/bg/tex2res4-dark.png');
   font-family: "Crimson", Georgia, serif;
   font-size: $font-size;
   line-height: 1.3;
@@ -96,13 +108,40 @@ body {
   }
 }
 
-#header {
+%nav-link-selected {
+  color: white;
+}
+%nav-link-selected-posts {
+  @extend %nav-link-selected;
+  background-color: $posts-color;
+}
+%nav-link-selected-book {
+  @extend %nav-link-selected;
+  background-color: $book-color;
+}
+%nav-link-selected-code {
+  @extend %nav-link-selected;
+  background-color: $code-color;
+}
+%nav-link-selected-talks {
+  @extend %nav-link-selected;
+  background-color: $talks-color;
+}
+%nav-link-selected-about {
+  @extend %nav-link-selected;
+  background-color: $about-color;
+}
+
+header {
+  background-color: $header-background-color;
   @extend %padded-section;
   text-align: center;
 
-  #site-nav {
+  nav ul {
     list-style-type: none;
     font-size: 1.5em;
+    font-family: "LeagueGothic";
+    text-transform: uppercase;
 
     li {
       display: inline;
@@ -113,23 +152,36 @@ body {
 
       a {
         padding: 0.1em 0.25em;
-      }
-      a, a:visited {
-        @extend %highlighted;
-      }
-      a:hover {
-        border-radius: 0.2em;
-        background-color: $highlight-color;
-        color: black;
+
+        &, &:visited {
+          color: $text-color;
+        }
+        &:hover {
+          &.posts {
+            @extend %nav-link-selected-posts;
+          }
+          &.book {
+            @extend %nav-link-selected-book;
+          }
+          &.code {
+            @extend %nav-link-selected-code;
+          }
+          &.talks {
+            @extend %nav-link-selected-talks;
+          }
+          &.about {
+            @extend %nav-link-selected-about;
+          }
+        }
       }
     }
   }
 }
 
-#main {
+main {
   clear: both;
-  color: #444;
-  background-color: #fffcfa;
+  background-color: $main-background-color;
+  color: $text-color;
 
   a, a:visited {
     color: #4183c4;
@@ -153,8 +205,16 @@ body {
     width: $site-width;
     margin: 0 auto;
   }
+}
 
-  &.about {
+body.about {
+  background-color: darken($about-color, $footer-darken-pct);
+
+  header nav a.about {
+    @extend %nav-link-selected-about;
+  }
+
+  main {
     img {
       float: left;
       $image-width: 400px;
@@ -164,8 +224,16 @@ body {
       }
     }
   }
+}
 
-  &.post {
+body.post {
+  background-color: darken($posts-color, $footer-darken-pct);
+
+  header nav a.posts {
+    @extend %nav-link-selected-posts;
+  }
+
+  main {
     $code-font-size: 0.8em;
     $code-bg-color: #eef;
     $code-border-color: #ddd;
@@ -213,11 +281,13 @@ body {
     #post-nav {
       @extend %post-footer;
 
-      a.prev {
-        float: left;
-      }
-      a.next {
-        float: right;
+      a {
+        &.prev {
+          float: left;
+        }
+        &.next {
+          float: right;
+        }
       }
     }
 
@@ -225,8 +295,16 @@ body {
       @extend %post-footer;
     }
   }
+}
 
-  &.posts {
+body.posts {
+  background-color: darken($posts-color, $footer-darken-pct);
+
+  header nav a.posts {
+    @extend %nav-link-selected-posts;
+  }
+
+  main {
     %date-column {
       width: 350px;
     }
@@ -247,16 +325,32 @@ body {
       }
     }
   }
+}
 
-  &.code {
+body.code {
+  background-color: darken($code-color, $footer-darken-pct);
+
+  header nav a.code {
+    @extend %nav-link-selected-code;
+  }
+
+  main {
     @extend %section-list;
 
     li {
       margin-left: 1em;
     }
   }
+}
 
-  &.talks {
+body.talks {
+  background-color: darken($talks-color, $footer-darken-pct);
+
+  header nav a.talks {
+    @extend %nav-link-selected-talks;
+  }
+
+  main {
     @extend %section-list;
 
     li {
@@ -273,11 +367,11 @@ body {
   }
 }
 
-#footer {
+footer {
   @extend %padded-section;
-  @extend %highlighted;
   clear: both;
   text-align: center;
+  color: $header-background-color;
 
   img {
     margin: 0 0.25em;

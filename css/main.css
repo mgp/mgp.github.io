@@ -23,6 +23,10 @@ html, body {
 
 /* mgp.css */
 @font-face {
+  font-family: "LeagueGothic";
+  src: url("/assets/LeagueGothic-Regular.otf"); }
+
+@font-face {
   font-family: "Crimson";
   src: url("/assets/Crimson-Roman.ttf"); }
 
@@ -30,16 +34,13 @@ html, body {
   font-family: "UbuntuMono";
   src: url("/assets/UbuntuMono-Regular.ttf"); }
 
-h1, h2, h3, h4, h5, h6, #header #site-nav li a, #header #site-nav li a:visited, #footer {
-  color: #f54828; }
-
-h1, h2, h3, h4, h5, h6, #main.code ul li .title, #main.talks ul li .title, #main.post p.meta {
+h1, h2, h3, h4, h5, h6, body.code main ul li .title, body.talks main ul li .title, body.post main p.meta {
   font-weight: bold; }
 
-#main.code ul li + li, #main.talks ul li + li, #main * + p, #main * + ul, #main * + ol, #main * + div.highlight, #main * + blockquote, #main * + h2, #main * + h3, #main * + h4 {
+body.code main ul li + li, body.talks main ul li + li, main * + p, main * + ul, main * + ol, main * + div.highlight, main * + blockquote, main * + h2, main * + h3, main * + h4 {
   margin-top: 0.75em; }
 
-#header, #main > div, #footer {
+header, main > div, footer {
   padding: 1em 0; }
 
 h1 {
@@ -55,97 +56,131 @@ a {
   text-decoration: none; }
 
 body {
-  background-image: url("/assets/images/bg/tex2res4-dark.png");
   font-family: "Crimson", Georgia, serif;
   font-size: 140%;
   line-height: 1.3; }
 
-#main.code ul, #main.talks ul {
+body.code main ul, body.talks main ul {
   list-style-type: none; }
-  #main.code ul li p, #main.talks ul li p {
+  body.code main ul li p, body.talks main ul li p {
     margin-top: 0.25em; }
 
-#header {
-  text-align: center; }
-  #header #site-nav {
-    list-style-type: none;
-    font-size: 1.5em; }
-    #header #site-nav li {
-      display: inline; }
-      #header #site-nav li + li {
-        padding-left: 1em; }
-      #header #site-nav li a {
-        padding: 0.1em 0.25em; }
-      #header #site-nav li a:hover {
-        border-radius: 0.2em;
-        background-color: #f54828;
-        color: black; }
+header nav ul li a.posts:hover, body.post header nav a.posts, body.posts header nav a.posts, header nav ul li a.book:hover, header nav ul li a.code:hover, body.code header nav a.code, header nav ul li a.talks:hover, body.talks header nav a.talks, header nav ul li a.about:hover, body.about header nav a.about {
+  color: white; }
 
-#main {
+header nav ul li a.posts:hover, body.post header nav a.posts, body.posts header nav a.posts {
+  background-color: #c23dff; }
+
+header nav ul li a.book:hover {
+  background-color: #45e0d3; }
+
+header nav ul li a.code:hover, body.code header nav a.code {
+  background-color: #b7f731; }
+
+header nav ul li a.talks:hover, body.talks header nav a.talks {
+  background-color: #ffc226; }
+
+header nav ul li a.about:hover, body.about header nav a.about {
+  background-color: #ff297e; }
+
+header {
+  background-color: whitesmoke;
+  text-align: center; }
+  header nav ul {
+    list-style-type: none;
+    font-size: 1.5em;
+    font-family: "LeagueGothic";
+    text-transform: uppercase; }
+    header nav ul li {
+      display: inline; }
+      header nav ul li + li {
+        padding-left: 1em; }
+      header nav ul li a {
+        padding: 0.1em 0.25em; }
+        header nav ul li a, header nav ul li a:visited {
+          color: #444444; }
+
+main {
   clear: both;
-  color: #444;
-  background-color: #fffcfa; }
-  #main a, #main a:visited {
+  background-color: #fefefe;
+  color: #444444; }
+  main a, main a:visited {
     color: #4183c4; }
-  #main a:hover {
+  main a:hover {
     background-color: yellow;
     color: black; }
-  #main li + li {
+  main li + li {
     margin-top: 0.25em; }
-  #main > div {
+  main > div {
     text-align: left;
     width: 920px;
     margin: 0 auto; }
-  #main.about img {
+
+body.about {
+  background-color: #520020; }
+  body.about main img {
     float: left; }
-    #main.about img + div {
+    body.about main img + div {
       margin-left: 400px; }
-  #main.post p.meta {
+
+body.post {
+  background-color: #460066; }
+  body.post main p.meta {
     margin-top: 0.25em; }
-  #main.post blockquote, #main.post ul, #main.post ol {
+  body.post main blockquote, body.post main ul, body.post main ol {
     margin-left: 1em; }
-  #main.post code, #main.post pre {
+  body.post main code, body.post main pre {
     border: 1px solid #dddddd;
     background-color: #eeeeff;
     font-family: "UbuntuMono", "Courier New", Courier, monospace; }
-  #main.post code {
+  body.post main code {
     font-size: 0.8em;
     padding: 0 0.25em; }
-  #main.post pre {
+  body.post main pre {
     padding: 0.5em;
     line-height: 1.1; }
-    #main.post pre code {
+    body.post main pre code {
       border: 0;
       padding: 0; }
-  #main.post #post-share, #main.post #post-nav, #main.post #disqus_thread {
+  body.post main #post-share, body.post main #post-nav, body.post main #disqus_thread {
     margin-top: 1.25em; }
-  #main.post #post-nav a.prev {
+  body.post main #post-nav a.prev {
     float: left; }
-  #main.post #post-nav a.next {
+  body.post main #post-nav a.next {
     float: right; }
-  #main.posts h2, #main.posts li span.date {
+
+body.posts {
+  background-color: #460066; }
+  body.posts main h2, body.posts main li span.date {
     width: 350px; }
-  #main.posts h2 {
+  body.posts main h2 {
     text-align: right; }
-  #main.posts li {
+  body.posts main li {
     list-style-type: none; }
-    #main.posts li span.date {
+    body.posts main li span.date {
       display: inline-block;
       text-align: right;
       margin-right: 0.5em; }
-  #main.code li {
+
+body.code {
+  background-color: #364f03; }
+  body.code main li {
     margin-left: 1em; }
-  #main.talks li img {
+
+body.talks {
+  background-color: #4f3900; }
+  body.talks main li img {
     float: left;
     margin-top: 0.25em; }
-    #main.talks li img + div {
+    body.talks main li img + div {
       margin-left: 200px; }
 
-#footer {
+footer {
   clear: both;
-  text-align: center; }
-  #footer img {
+  text-align: center;
+  color: whitesmoke; }
+  footer img {
     margin: 0 0.25em;
     margin-bottom: -4px; }
-    #footer img.last {
+    footer img.last {
       margin-right: 0; }
