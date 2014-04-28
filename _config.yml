@@ -9,4 +9,4 @@ enable_disqus: true
 enable_sharing: true
 
 redcarpet:
-  extensions: [no_intra_emphasis, autolink, strikethrough, superscript, underline, smart]
+  extensions: [no_intra_emphasis, autolink, strikethrough, superscript, underline, smart, tables]

@@ -200,7 +200,7 @@ main {
     color: black;
   }
 
-  * + p, * + ul, * + ol, * + div.highlight, * + blockquote, * + h2, * + h3, * + h4 {
+  * + p, * + ul, * + ol, * + div.highlight, * + blockquote, * + h2, * + h3, * + h4, * + table {
     @extend %padded-text;
   }
 
@@ -254,6 +254,39 @@ body.post {
 
     blockquote, ul, ol {
       margin-left: 1em;
+    }
+
+    table {
+      border-spacing: 0;
+      border-collapse: collapse;
+
+      %first-cell-left-padding {
+        padding-left: 0.5em;
+      }
+      %cell-right-padding {
+        padding-right: 2em;
+      }
+
+      th {
+        @extend %bolded;
+        @extend %cell-right-padding;
+        border-bottom: 2px solid black;
+
+        &:first-child {
+          @extend %first-cell-left-padding;
+        }
+        code {
+          font-family: "UbuntuMonoBold", "Courier New", Courier, monospace;
+        }
+      }
+      td {
+        @extend %cell-right-padding;
+        border-bottom: 1px dotted black;
+
+        &:first-child {
+          @extend %first-cell-left-padding;
+        }
+      }
     }
 
     %code {

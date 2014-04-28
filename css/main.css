@@ -34,11 +34,11 @@ html, body {
 @font-face {
   font-family: "UbuntuMono";
   src: url("/assets/UbuntuMono-Regular.ttf"); }
-h1, h2, h3, h4, h5, h6, body.code main ul li .title, body.talks main ul li .title, body.post main p.meta {
+h1, h2, h3, h4, h5, h6, body.code main ul li .title, body.talks main ul li .title, body.post main p.meta, body.post main table th {
   font-family: "CrimsonBold", Georgia, serif;
   font-weight: normal; }
 
-body.code main ul li + li, body.talks main ul li + li, main * + p, main * + ul, main * + ol, main * + div.highlight, main * + blockquote, main * + h2, main * + h3, main * + h4 {
+body.code main ul li + li, body.talks main ul li + li, main * + p, main * + ul, main * + ol, main * + div.highlight, main * + blockquote, main * + h2, main * + h3, main * + h4, main * + table {
   margin-top: 0.75em; }
 
 header, main > div, footer {
@@ -133,6 +133,19 @@ body.post {
     margin-top: 0.25em; }
   body.post main blockquote, body.post main ul, body.post main ol {
     margin-left: 1em; }
+  body.post main table {
+    border-spacing: 0;
+    border-collapse: collapse; }
+    body.post main table th:first-child, body.post main table td:first-child {
+      padding-left: 0.5em; }
+    body.post main table th, body.post main table td {
+      padding-right: 2em; }
+    body.post main table th {
+      border-bottom: 2px solid black; }
+      body.post main table th code {
+        font-family: "UbuntuMonoBold", "Courier New", Courier, monospace; }
+    body.post main table td {
+      border-bottom: 1px dotted black; }
   body.post main code, body.post main pre {
     border: 1px solid #dddddd;
     background-color: whitesmoke;
