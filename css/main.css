@@ -86,7 +86,8 @@ header nav ul li a.about:hover, body.about header nav a.about {
 
 header {
   background-color: whitesmoke;
-  text-align: center; }
+  text-align: center;
+  border-bottom: 1px solid #dddddd; }
   header nav ul {
     list-style-type: none;
     font-size: 1.5em;
@@ -132,7 +133,7 @@ body.post {
     margin-left: 1em; }
   body.post main code, body.post main pre {
     border: 1px solid #dddddd;
-    background-color: #eeeeff;
+    background-color: whitesmoke;
     font-family: "UbuntuMono", "Courier New", Courier, monospace; }
   body.post main code {
     font-size: 0.8em;
