@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "UbuntuMonoBold";
+  src: url('/assets/UbuntuMono-Bold.ttf');
+}
+
+%bolded {
+  font-family: "UbuntuMonoBold", "Courier New", Courier, monospace;
+}
+
+.highlight {
+  .c { color: #0099FF; }
+  .err { color: #AA0000; background-color: #FFAAAA }
+  .k { color: #006699; @extend %bolded; }
+  .o { color: #555555 }
+  .cm { color: #0099FF; }
+  .cp { color: #009999 }
+  .c1 { color: #0099FF; }
+  .cs { color: #0099FF; @extend %bolded; }
+  .gd { background-color: #FFCCCC; border: 1px solid #CC0000 }
+  .ge { }
+  .gr { color: #FF0000 }
+  .gh { color: #003300; @extend %bolded; }
+  .gi { background-color: #CCFFCC; border: 1px solid #00CC00 }
+  .go { color: #AAAAAA }
+  .gp { color: #000099; @extend %bolded; }
+  .gs { @extend %bolded; }
+  .gu { color: #003300; @extend %bolded; }
+  .gt { color: #99CC66 }
+  .kc { color: #006699; @extend %bolded; }
+  .kd { color: #006699; @extend %bolded; }
+  .kn { color: #006699; @extend %bolded; }
+  .kp { color: #006699 }
+  .kr { color: #006699; @extend %bolded; }
+  .kt { color: #007788; @extend %bolded; }
+  .m { color: #FF6600 }
+  .s { color: #CC3300 }
+  .na { color: #330099 }
+  .nb { color: #336666 }
+  .nc { color: #00AA88; @extend %bolded; }
+  .no { color: #336600 }
+  .nd { color: #9999FF }
+  .ni { color: #999999; @extend %bolded; }
+  .ne { color: #CC0000; @extend %bolded; }
+  .nf { color: #CC00FF }
+  .nl { color: #9999FF }
+  .nn { color: #00CCFF; @extend %bolded; }
+  .nt { color: #330099; @extend %bolded; }
+  .nv { color: #003333 }
+  .ow { color: #000000; @extend %bolded; }
+  .w { color: #bbbbbb }
+  .mf { color: #FF6600 }
+  .mh { color: #FF6600 }
+  .mi { color: #FF6600 }
+  .mo { color: #FF6600 }
+  .sb { color: #CC3300 }
+  .sc { color: #CC3300 }
+  .sd { color: #CC3300; }
+  .s2 { color: #CC3300 }
+  .se { color: #CC3300; @extend %bolded; }
+  .sh { color: #CC3300 }
+  .si { color: #AA0000 }
+  .sx { color: #CC3300 }
+  .sr { color: #33AAAA }
+  .s1 { color: #CC3300 }
+  .ss { color: #FFCC33 }
+  .bp { color: #336666 }
+  .vc { color: #003333 }
+  .vg { color: #003333 }
+  .vi { color: #003333 }
+  .il { color: #FF6600 }
+}
