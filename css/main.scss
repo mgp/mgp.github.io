@@ -26,20 +26,20 @@ $site-width: 920px;
 $font-size: 140%;
 $text-color: #444;
 $footer-darken-pct: 42%;
-$main-background-color: #fefefe;
 $header-background-color: #f5f5f5;
+$main-background-color: #fefefe;
 
-$purple-color: #C23DFF;
-$blue-color: #45E0D3;
-$green-color: #B7F731;
-$orange-color: #FFC226;
-$red-color: #FF297E;
+$purple-nav-color: #C23DFF;
+$blue-nav-color: #45E0D3;
+$green-nav-color: #B7F731;
+$orange-nav-color: #FFC226;
+$red-nav-color: #FF297E;
 
-$posts-color: $purple-color;
-$book-color: $blue-color;
-$code-color: $green-color;
-$talks-color: $orange-color;
-$about-color: $red-color;
+$posts-nav-color: $purple-nav-color;
+$book-nav-color: $blue-nav-color;
+$code-nav-color: $green-nav-color;
+$talks-nav-color: $orange-nav-color;
+$about-nav-color: $red-nav-color;
 
 @font-face {
   font-family: "LeagueGothic";
@@ -118,23 +118,23 @@ body {
 }
 %nav-link-selected-posts {
   @extend %nav-link-selected;
-  background-color: $posts-color;
+  background-color: $posts-nav-color;
 }
 %nav-link-selected-book {
   @extend %nav-link-selected;
-  background-color: $book-color;
+  background-color: $book-nav-color;
 }
 %nav-link-selected-code {
   @extend %nav-link-selected;
-  background-color: $code-color;
+  background-color: $code-nav-color;
 }
 %nav-link-selected-talks {
   @extend %nav-link-selected;
-  background-color: $talks-color;
+  background-color: $talks-nav-color;
 }
 %nav-link-selected-about {
   @extend %nav-link-selected;
-  background-color: $about-color;
+  background-color: $about-nav-color;
 }
 
 header {
@@ -213,7 +213,7 @@ main {
 }
 
 body.about {
-  background-color: darken($about-color, $footer-darken-pct);
+  background-color: darken($about-nav-color, $footer-darken-pct);
 
   header nav a.about {
     @extend %nav-link-selected-about;
@@ -232,7 +232,7 @@ body.about {
 }
 
 body.post {
-  background-color: darken($posts-color, $footer-darken-pct);
+  background-color: darken($posts-nav-color, $footer-darken-pct);
 
   header nav a.posts {
     @extend %nav-link-selected-posts;
@@ -240,7 +240,7 @@ body.post {
 
   main {
     $code-font-size: 0.8em;
-    $code-bg-color: #eef;
+    $code-background-color: #eef;
     $code-border-color: #ddd;
 
     p.meta {
@@ -254,7 +254,7 @@ body.post {
 
     %code {
       border: 1px solid $code-border-color;
-      background-color: $code-bg-color;
+      background-color: $code-background-color;
       font-family: "UbuntuMono", "Courier New", Courier, monospace;
     }
 
@@ -303,7 +303,7 @@ body.post {
 }
 
 body.posts {
-  background-color: darken($posts-color, $footer-darken-pct);
+  background-color: darken($posts-nav-color, $footer-darken-pct);
 
   header nav a.posts {
     @extend %nav-link-selected-posts;
@@ -333,7 +333,7 @@ body.posts {
 }
 
 body.code {
-  background-color: darken($code-color, $footer-darken-pct);
+  background-color: darken($code-nav-color, $footer-darken-pct);
 
   header nav a.code {
     @extend %nav-link-selected-code;
@@ -349,7 +349,7 @@ body.code {
 }
 
 body.talks {
-  background-color: darken($talks-color, $footer-darken-pct);
+  background-color: darken($talks-nav-color, $footer-darken-pct);
 
   header nav a.talks {
     @extend %nav-link-selected-talks;
