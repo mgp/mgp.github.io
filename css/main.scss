@@ -50,12 +50,17 @@ $about-color: $red-color;
   src: url('/assets/Crimson-Roman.ttf');
 }
 @font-face {
+  font-family: "CrimsonBold";
+  src: url('/assets/Crimson-Semibold.ttf');
+}
+@font-face {
   font-family: "UbuntuMono";
   src: url('/assets/UbuntuMono-Regular.ttf');
 }
 
 %bolded {
-  font-weight: bold;
+  font-family: "CrimsonBold", Georgia, serif;
+  font-weight: normal;
 }
 %padded-text {
   margin-top: 0.75em;

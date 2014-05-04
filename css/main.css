@@ -25,17 +25,18 @@ html, body {
 @font-face {
   font-family: "LeagueGothic";
   src: url("/assets/LeagueGothic-Regular.otf"); }
-
 @font-face {
   font-family: "Crimson";
   src: url("/assets/Crimson-Roman.ttf"); }
-
+@font-face {
+  font-family: "CrimsonBold";
+  src: url("/assets/Crimson-Semibold.ttf"); }
 @font-face {
   font-family: "UbuntuMono";
   src: url("/assets/UbuntuMono-Regular.ttf"); }
-
 h1, h2, h3, h4, h5, h6, body.code main ul li .title, body.talks main ul li .title, body.post main p.meta {
-  font-weight: bold; }
+  font-family: "CrimsonBold", Georgia, serif;
+  font-weight: normal; }
 
 body.code main ul li + li, body.talks main ul li + li, main * + p, main * + ul, main * + ol, main * + div.highlight, main * + blockquote, main * + h2, main * + h3, main * + h4 {
   margin-top: 0.75em; }
