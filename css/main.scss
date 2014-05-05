@@ -26,6 +26,7 @@ $site-width: 920px;
 $font-size: 140%;
 $text-color: #444;
 $footer-darken-pct: 42%;
+$title-font-size: 1.15em;
 
 $light-gray-background-color: #f5f5f5;
 $gray-border-color: #ddd;
@@ -72,15 +73,15 @@ $about-nav-color: $red-nav-color;
 
 h1 {
   @extend %bolded;
-  font-size: 1.5em;
+  font-size: 1.95em;
 }
 h2 {
   @extend %bolded;
-  font-size: 1.25em;
+  font-size: 1.55em;
 }
 h3, h4, h5, h6 {
   @extend %bolded;
-  font-size: 1em;
+  font-size: $title-font-size;
 }
 a {
   text-decoration: none;
@@ -101,6 +102,7 @@ body {
     li {
       .title {
         @extend %bolded;
+        font-size: $title-font-size;
       }
 
       p {

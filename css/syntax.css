@@ -2,7 +2,8 @@
   font-family: "UbuntuMonoBold";
   src: url("/assets/UbuntuMono-Bold.ttf"); }
 .highlight .k, .highlight .cs, .highlight .gh, .highlight .gp, .highlight .gs, .highlight .gu, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kr, .highlight .kt, .highlight .nc, .highlight .ni, .highlight .ne, .highlight .nn, .highlight .nt, .highlight .ow, .highlight .se {
-  font-family: "UbuntuMonoBold", "Courier New", Courier, monospace; }
+  font-family: "UbuntuMonoBold", "Courier New", Courier, monospace;
+  font-weight: normal; }
 
 .highlight .c {
   color: #0099FF; }

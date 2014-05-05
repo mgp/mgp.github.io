@@ -45,13 +45,13 @@ header, main > div, footer {
   padding: 1em 0; }
 
 h1 {
-  font-size: 1.5em; }
+  font-size: 1.95em; }
 
 h2 {
-  font-size: 1.25em; }
+  font-size: 1.55em; }
 
 h3, h4, h5, h6 {
-  font-size: 1em; }
+  font-size: 1.15em; }
 
 a {
   text-decoration: none; }
@@ -63,6 +63,8 @@ body {
 
 body.code main ul, body.talks main ul {
   list-style-type: none; }
+  body.code main ul li .title, body.talks main ul li .title {
+    font-size: 1.15em; }
   body.code main ul li p, body.talks main ul li p {
     margin-top: 0.25em; }
 
