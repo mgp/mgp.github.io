@@ -27,7 +27,7 @@ $gray: #ddd;
 $dark-gray: #444;
 
 $site-width: 920px;
-$font-size: 140%;
+$font-size: 130%;
 $text-color: $dark-gray;
 $border-color: $gray;
 $title-font-size: 1.15em;
@@ -71,12 +71,12 @@ $about-footer-color: $green-light;
   src: url('/assets/LeagueGothic-Regular.otf');
 }
 @font-face {
-  font-family: "Crimson";
-  src: url('/assets/Crimson-Roman.ttf');
+  font-family: "Lato";
+  src: url('/assets/Lato-Light.ttf');
 }
 @font-face {
-  font-family: "CrimsonBold";
-  src: url('/assets/Crimson-Semibold.ttf');
+  font-family: "LatoBold";
+  src: url('/assets/Lato-Semibold.ttf');
 }
 @font-face {
   font-family: "UbuntuMono";
@@ -84,7 +84,7 @@ $about-footer-color: $green-light;
 }
 
 %bolded {
-  font-family: "CrimsonBold", Georgia, serif;
+  font-family: "LatoBold", Georgia, serif;
   font-weight: normal;
 }
 %padded-text {
@@ -111,9 +111,9 @@ a {
 }
 
 body {
-  font-family: "Crimson", Georgia, serif;
+  font-family: "Lato", Georgia, serif;
   font-size: $font-size;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 %section-list {
@@ -167,7 +167,7 @@ header {
 
   nav ul {
     list-style-type: none;
-    font-size: 1.5em;
+    font-size: 1.75em;
     font-family: "LeagueGothic";
     text-transform: uppercase;
 
