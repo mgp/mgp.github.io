@@ -22,26 +22,49 @@ html, body { height: 100%; }
 
 /* mgp.css */
 
+$light-gray: #f5f5f5;
+$gray: #ddd;
+$dark-gray: #444;
+
 $site-width: 920px;
 $font-size: 140%;
-$text-color: #444;
-$footer-darken-pct: 42%;
+$text-color: $dark-gray;
+$border-color: $gray;
 $title-font-size: 1.15em;
 
-$light-gray-background-color: #f5f5f5;
-$gray-border-color: #ddd;
+/* colors from A400 and 50 values at https://www.google.com/design/spec/style/color.html#color-color-palette */
 
-$purple-nav-color: #C23DFF;
-$blue-nav-color: #45E0D3;
-$green-nav-color: #B7F731;
-$orange-nav-color: #FFC226;
-$red-nav-color: #FF297E;
+$red-dark: #ff1744;
+$red-light: #ffebee;
+$pink-dark: #f50057;
+$pink-light: #fce4ec;
+$purple-dark: #d500f9;
+$purple-light: #f3e5f5;
+$light-blue-dark: #00b0ff;
+$light-blue-light: #e1f5fe;
+$cyan-dark: #00e5ff;
+$cyan-light: #e0f7fa;
+$teal-dark: #1de9b6;
+$teal-light: #e0f2f1;
+$green-dark: #00e676;
+$green-light: #e8f5e9;
+$light-green-dark: #76ff03;
+$light-green-light: #f1f8e9;
+$amber-dark: #ffc400;
+$amber-light: #fff8e1;
+$orange-dark: #ff9100;
+$orange-light: #fff3e0;
+$deep-orange-dark: #ff3d00;
+$deep-orange-light: #fbe9e7;
 
-$posts-nav-color: $purple-nav-color;
-$book-nav-color: $blue-nav-color;
-$code-nav-color: $green-nav-color;
-$talks-nav-color: $orange-nav-color;
-$about-nav-color: $red-nav-color;
+$posts-nav-color: $cyan-dark;
+$posts-footer-color: $cyan-light;
+$code-nav-color: $purple-dark;
+$code-footer-color: $purple-light;
+$talks-nav-color: $amber-dark;
+$talks-footer-color: $amber-light;
+$about-nav-color: $green-dark;
+$about-footer-color: $green-light;
 
 @font-face {
   font-family: "LeagueGothic";
@@ -123,10 +146,6 @@ body {
   @extend %nav-link-selected;
   background-color: $posts-nav-color;
 }
-%nav-link-selected-book {
-  @extend %nav-link-selected;
-  background-color: $book-nav-color;
-}
 %nav-link-selected-code {
   @extend %nav-link-selected;
   background-color: $code-nav-color;
@@ -141,10 +160,10 @@ body {
 }
 
 header {
-  background-color: $light-gray-background-color;
+  background-color: $light-gray;
   @extend %padded-section;
   text-align: center;
-  border-bottom: 1px solid $gray-border-color;
+  border-bottom: 1px solid $border-color;
 
   nav ul {
     list-style-type: none;
@@ -168,9 +187,6 @@ header {
         &:hover {
           &.posts {
             @extend %nav-link-selected-posts;
-          }
-          &.book {
-            @extend %nav-link-selected-book;
           }
           &.code {
             @extend %nav-link-selected-code;
@@ -217,7 +233,7 @@ main {
 }
 
 body.about {
-  background-color: darken($about-nav-color, $footer-darken-pct);
+  background-color: $about-footer-color;
 
   header nav a.about {
     @extend %nav-link-selected-about;
@@ -236,7 +252,7 @@ body.about {
 }
 
 body.post {
-  background-color: darken($posts-nav-color, $footer-darken-pct);
+  background-color: $posts-footer-color;
 
   header nav a.posts {
     @extend %nav-link-selected-posts;
@@ -244,8 +260,8 @@ body.post {
 
   main {
     $code-font-size: 0.8em;
-    $code-background-color: $light-gray-background-color;
-    $code-border-color: $gray-border-color;
+    $code-background-color: $light-gray;
+    $code-border-color: $border-color;
 
     p.meta {
       @extend %bolded;
@@ -307,7 +323,7 @@ body.post {
 }
 
 body.posts {
-  background-color: darken($posts-nav-color, $footer-darken-pct);
+  background-color: $posts-footer-color;
 
   header nav a.posts {
     @extend %nav-link-selected-posts;
@@ -337,7 +353,7 @@ body.posts {
 }
 
 body.code {
-  background-color: darken($code-nav-color, $footer-darken-pct);
+  background-color: $code-footer-color;
 
   header nav a.code {
     @extend %nav-link-selected-code;
@@ -353,7 +369,7 @@ body.code {
 }
 
 body.talks {
-  background-color: darken($talks-nav-color, $footer-darken-pct);
+  background-color: $talks-footer-color;
 
   header nav a.talks {
     @extend %nav-link-selected-talks;
@@ -380,7 +396,7 @@ footer {
   @extend %padded-section;
   clear: both;
   text-align: center;
-  color: $light-gray-background-color;
+  color: $text-color;
 
   img {
     margin: 0 0.25em;

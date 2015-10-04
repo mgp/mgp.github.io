@@ -22,6 +22,7 @@ html, body {
   zoom: 1; }
 
 /* mgp.css */
+/* colors from A400 and 50 values at https://www.google.com/design/spec/style/color.html#color-color-palette */
 @font-face {
   font-family: "LeagueGothic";
   src: url("/assets/LeagueGothic-Regular.otf"); }
@@ -68,28 +69,25 @@ body.code main ul, body.talks main ul {
   body.code main ul li p, body.talks main ul li p {
     margin-top: 0.25em; }
 
-header nav ul li a.posts:hover, body.post header nav a.posts, body.posts header nav a.posts, header nav ul li a.book:hover, header nav ul li a.code:hover, body.code header nav a.code, header nav ul li a.talks:hover, body.talks header nav a.talks, header nav ul li a.about:hover, body.about header nav a.about {
+header nav ul li a.posts:hover, body.post header nav a.posts, body.posts header nav a.posts, header nav ul li a.code:hover, body.code header nav a.code, header nav ul li a.talks:hover, body.talks header nav a.talks, header nav ul li a.about:hover, body.about header nav a.about {
   color: white; }
 
 header nav ul li a.posts:hover, body.post header nav a.posts, body.posts header nav a.posts {
-  background-color: #c23dff; }
-
-header nav ul li a.book:hover {
-  background-color: #45e0d3; }
+  background-color: #00e5ff; }
 
 header nav ul li a.code:hover, body.code header nav a.code {
-  background-color: #b7f731; }
+  background-color: #d500f9; }
 
 header nav ul li a.talks:hover, body.talks header nav a.talks {
-  background-color: #ffc226; }
+  background-color: #ffc400; }
 
 header nav ul li a.about:hover, body.about header nav a.about {
-  background-color: #ff297e; }
+  background-color: #00e676; }
 
 header {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   text-align: center;
-  border-bottom: 1px solid #dddddd; }
+  border-bottom: 1px solid #ddd; }
   header nav ul {
     list-style-type: none;
     font-size: 1.5em;
@@ -102,12 +100,12 @@ header {
       header nav ul li a {
         padding: 0.1em 0.25em; }
         header nav ul li a, header nav ul li a:visited {
-          color: #444444; }
+          color: #444; }
 
 main {
   clear: both;
   background-color: #fefefe;
-  color: #444444; }
+  color: #444; }
   main a, main a:visited {
     color: #4183c4; }
   main a:hover {
@@ -121,21 +119,21 @@ main {
     margin: 0 auto; }
 
 body.about {
-  background-color: #520020; }
+  background-color: #e8f5e9; }
   body.about main img {
     float: left; }
     body.about main img + div {
       margin-left: 400px; }
 
 body.post {
-  background-color: #460066; }
+  background-color: #e0f7fa; }
   body.post main p.meta {
     margin-top: 0.25em; }
   body.post main blockquote, body.post main ul, body.post main ol {
     margin-left: 1em; }
   body.post main code, body.post main pre {
-    border: 1px solid #dddddd;
-    background-color: whitesmoke;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
     font-family: "UbuntuMono", "Courier New", Courier, monospace; }
   body.post main code {
     font-size: 0.8em;
@@ -154,7 +152,7 @@ body.post {
     float: right; }
 
 body.posts {
-  background-color: #460066; }
+  background-color: #e0f7fa; }
   body.posts main h2, body.posts main li span.date {
     width: 350px; }
   body.posts main h2 {
@@ -167,12 +165,12 @@ body.posts {
       margin-right: 0.5em; }
 
 body.code {
-  background-color: #364f03; }
+  background-color: #f3e5f5; }
   body.code main li {
     margin-left: 1em; }
 
 body.talks {
-  background-color: #4f3900; }
+  background-color: #fff8e1; }
   body.talks main li img {
     float: left;
     margin-top: 0.25em; }
@@ -182,7 +180,7 @@ body.talks {
 footer {
   clear: both;
   text-align: center;
-  color: whitesmoke; }
+  color: #444; }
   footer img {
     margin: 0 0.25em;
     margin-bottom: -4px; }
