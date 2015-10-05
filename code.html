@@ -4,34 +4,48 @@ title: Code
 class: code
 ---
 
-<p>Some code that I've open sourced follows. You can also <a href="https://github.com/mgp">follow me on GitHub</a>.</p>
+<p>Here is some code that I've worked on professionally. You can <a href="/resume.html">find more details in my resume</a>:</p>
 
-<ul>
+<ul class="professional">
+  <li class="clearfix">
+    <div><img src="/assets/images/khan-academy-logo.png" /></div>
+    <div>
+      <a href="https://www.khanacademy.org/" class="title">Khan Academy</a>
+      <p>Khan Academy seeks to provide a free, world-class education for anyone, anywhere. I help develop their <a href="https://itunes.apple.com/us/app/id469863705">iOS app</a> and <a href="https://play.google.com/store/apps/details?id=org.khanacademy.android">Android app</a>.</p>
+    </div>
+  </li>
+
+  <li class="clearfix">
+    <div><img src="/assets/images/burner-logo.png" /></div>
+    <div>
+      <a href="http://www.burnerapp.com/" class="title">Burner</a>
+      <p>Burner provides temporary and disposable phone numbers for online dating, Craigslist, and more. I productionized the backend while increasing test coverage from 0% to over 90%, and wrote <a href="https://play.google.com/store/apps/details?id=com.adhoclabs.burner">the Android app</a> in its entirety.</p>
+    </div>
+  </li>
+
+  <li class="clearfix">
+    <div><img src="/assets/images/google-docs-logo.png" /></div>
+    <div>
+      <a href="https://www.google.com/docs/about/" class="title">Google Docs</a>
+      <p>Google Docs allows creating and editing documents online while collaborating with other users in real-time. I enhanced the sharing functionality for files and folders, and helped keep the product running smoothly in production.</p>
+    </div>
+  </li>
+</ul>
+
+<p>And here are some open-source projects that I've worked on. You can <a href="https://github.com/mgp">find the rest on GitHub</a>:</p>
+
+<ul class="open-source">
   <li>
     <a href="https://github.com/mgp/iron-cushion" class="title">Iron Cushion</a>
     <p>Benchmarks and load tests <a href="http://couchdb.apache.org/">CouchDB</a>, a document-oriented and RESTful database. Gathers statistics for both bulk insert and CRUD operations. I wrote this to verify that CouchDB could handle all the data that <a href="http://burnerapp.com/">Burner</a> would throw at it. Currently used by <a href="https://cloudant.com/">Cloudant</a>.</p>
-  </li>
-  <li>
-    <a href="https://github.com/mgp/blackjack-analyst" class="title">Blackjack Analyst</a>
-    <p>Simulates millions of hands of Blackjack using different playing strategies so that you can compare their efficacy. Includes several predefined strategies and allows easily defining new ones. Written many years ago while I was still a broke college student with dreams of conquering Vegas.</p>
-  </li>
-  <li>
-    <a href="https://github.com/mgp/loco" class="title">Loco</a>
-    <p>Simplifies location acquisition on the iPhone while using heuristics to minimize battery usage, such as acquiring a location using GPS only when a change in cellular towers is detected. Inspired by a wave of apps that constantly use GPS and drain the battery.</p>
   </li>
   <li>
     <a href="https://github.com/mgp/tarsnap-manager" class="title">Tarsnap Manager</a>
     <p>Manages daily, weekly, and monthly backups on <a href="http://www.tarsnap.com/">Tarsnap</a>. When run as a daily cron job, older backups are deleted as newer ones are created, while more recent dates have smaller intervals between backups.</p>
   </li>
   <li>
-    <a href="https://github.com/mgp/canned-http" class="title">Canned HTTP</a>
-    <p>Waits for the next HTTP request in a series, and asserts that its URL, method, parameter list, and body contain the expected values. If so, a predefined response is returned and the server waits for the next request; otherwise, an error is generated.</p>
-  </li>
-  <li>
     <a href="https://code.google.com/p/sxse/" class="title">Side-by-side Search Comparison Tool</a>
     <p>Compares side-by-side the results of two different search providers. Written so that <a href="http://www.google.com/enterprise/search/products/gsa.html">Google search appliance</a> customers could compare different <a href="https://developers.google.com/search-appliance/documentation/614/help_gsa/serve_scoring">scoring policies</a>. After some press by <a href="http://readwrite.com/2009/08/19/google-wants-you-to-do-side-by-side-comparisons-in-search">ReadWriteWeb</a> and <a href="http://searchenginewatch.com/article/2051932/Google-Enterprise-Labs-Launches-Side-By-Side-Search-Tool">Search Engine Watch</a>, it was mistaken as a challenge to Bing.</p>
   </li>
 </ul>
-
-<p>Code that I've written in a professional capacity is described on the <a href="/about/">About page</a>.</p>
 

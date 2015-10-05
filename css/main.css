@@ -68,6 +68,15 @@ body.code main ul, body.talks main ul {
     font-size: 1.15em; }
   body.code main ul li p, body.talks main ul li p {
     margin-top: 0.25em; }
+  body.code main ul li > div:first-child, body.talks main ul li > div:first-child {
+    float: left;
+    margin-top: 0.25em;
+    width: 200px;
+    text-align: right; }
+    body.code main ul li > div:first-child > img, body.talks main ul li > div:first-child > img {
+      margin-right: 30px; }
+    body.code main ul li > div:first-child + div, body.talks main ul li > div:first-child + div {
+      margin-left: 200px; }
 
 header nav ul li a.posts:hover, body.post header nav a.posts, body.posts header nav a.posts, header nav ul li a.code:hover, body.code header nav a.code, header nav ul li a.talks:hover, body.talks header nav a.talks, header nav ul li a.about:hover, body.about header nav a.about {
   color: white; }
@@ -180,19 +189,16 @@ body.code {
   body.code main {
     border-top-color: #d500f9;
     border-bottom-color: #d500f9; }
-    body.code main li {
-      margin-left: 1em; }
+    body.code main ul.professional {
+      margin-bottom: 1.5em; }
+    body.code main ul.open-source li {
+      margin-left: 3em; }
 
 body.talks {
   background-color: #fff8e1; }
   body.talks main {
     border-top-color: #ffc400;
     border-bottom-color: #ffc400; }
-    body.talks main li img {
-      float: left;
-      margin-top: 0.25em; }
-      body.talks main li img + div {
-        margin-left: 200px; }
 
 footer {
   clear: both;
