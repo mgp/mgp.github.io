@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6, body.code main ul li .title, body.talks main ul li .titl
 body.code main ul li + li, body.talks main ul li + li, main * + p, main * + ul, main * + ol, main * + div.highlight, main * + blockquote, main * + h2, main * + h3, main * + h4 {
   margin-top: 0.75em; }
 
-header, main > div, footer {
+header, footer {
   padding: 1em; }
 
 h1 {
@@ -110,6 +110,7 @@ header {
           color: #444; }
 
 main {
+  padding: 1.5em 1em;
   clear: both;
   background-color: #fefefe;
   color: #444;
