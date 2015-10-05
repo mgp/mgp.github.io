@@ -91,7 +91,7 @@ $about-background-color: $green-light;
   margin-top: 0.75em;
 }
 %padded-section {
-  padding: 1em 0;
+  padding: 1em;
 }
 
 h1 {
@@ -230,7 +230,7 @@ main {
   & > div {
     @extend %padded-section;
     text-align: left;
-    width: $site-width;
+    max-width: $site-width;
     margin: 0 auto;
   }
 }
