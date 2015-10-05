@@ -58,13 +58,13 @@ $deep-orange-dark: #ff3d00;
 $deep-orange-light: #fbe9e7;
 
 $posts-nav-color: $cyan-dark;
-$posts-footer-color: $cyan-light;
+$posts-background-color: $cyan-light;
 $code-nav-color: $purple-dark;
-$code-footer-color: $purple-light;
+$code-background-color: $purple-light;
 $talks-nav-color: $amber-dark;
-$talks-footer-color: $amber-light;
+$talks-background-color: $amber-light;
 $about-nav-color: $green-dark;
-$about-footer-color: $green-light;
+$about-background-color: $green-light;
 
 @font-face {
   font-family: "LeagueGothic";
@@ -160,10 +160,8 @@ body {
 }
 
 header {
-  background-color: $light-gray;
   @extend %padded-section;
   text-align: center;
-  border-bottom: 1px solid $border-color;
 
   nav ul {
     list-style-type: none;
@@ -208,6 +206,11 @@ main {
   background-color: #fefefe;
   color: $text-color;
 
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+
   a, a:visited {
     color: #4183c4;
   }
@@ -233,13 +236,16 @@ main {
 }
 
 body.about {
-  background-color: $about-footer-color;
+  background-color: $about-background-color;
 
   header nav a.about {
     @extend %nav-link-selected-about;
   }
 
   main {
+    border-top-color: $about-nav-color;
+    border-bottom-color: $about-nav-color;
+
     img {
       float: left;
       $image-width: 400px;
@@ -252,13 +258,16 @@ body.about {
 }
 
 body.post {
-  background-color: $posts-footer-color;
+  background-color: $posts-background-color;
 
   header nav a.posts {
     @extend %nav-link-selected-posts;
   }
 
   main {
+    border-top-color: $posts-nav-color;
+    border-bottom-color: $posts-nav-color;
+
     $code-font-size: 0.8em;
     $code-background-color: $light-gray;
     $code-border-color: $border-color;
@@ -323,13 +332,16 @@ body.post {
 }
 
 body.posts {
-  background-color: $posts-footer-color;
+  background-color: $posts-background-color;
 
   header nav a.posts {
     @extend %nav-link-selected-posts;
   }
 
   main {
+    border-top-color: $posts-nav-color;
+    border-bottom-color: $posts-nav-color;
+
     %date-column {
       width: 350px;
     }
@@ -353,13 +365,16 @@ body.posts {
 }
 
 body.code {
-  background-color: $code-footer-color;
+  background-color: $code-background-color;
 
   header nav a.code {
     @extend %nav-link-selected-code;
   }
 
   main {
+    border-top-color: $code-nav-color;
+    border-bottom-color: $code-nav-color;
+
     @extend %section-list;
 
     li {
@@ -369,13 +384,16 @@ body.code {
 }
 
 body.talks {
-  background-color: $talks-footer-color;
+  background-color: $talks-background-color;
 
   header nav a.talks {
     @extend %nav-link-selected-talks;
   }
 
   main {
+    border-top-color: $talks-nav-color;
+    border-bottom-color: $talks-nav-color;
+
     @extend %section-list;
 
     li {

@@ -85,9 +85,7 @@ header nav ul li a.about:hover, body.about header nav a.about {
   background-color: #00e676; }
 
 header {
-  background-color: #f5f5f5;
-  text-align: center;
-  border-bottom: 1px solid #ddd; }
+  text-align: center; }
   header nav ul {
     list-style-type: none;
     font-size: 1.75em;
@@ -105,7 +103,11 @@ header {
 main {
   clear: both;
   background-color: #fefefe;
-  color: #444; }
+  color: #444;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-style: solid; }
   main a, main a:visited {
     color: #4183c4; }
   main a:hover {
@@ -120,62 +122,77 @@ main {
 
 body.about {
   background-color: #e8f5e9; }
-  body.about main img {
-    float: left; }
-    body.about main img + div {
-      margin-left: 400px; }
+  body.about main {
+    border-top-color: #00e676;
+    border-bottom-color: #00e676; }
+    body.about main img {
+      float: left; }
+      body.about main img + div {
+        margin-left: 400px; }
 
 body.post {
   background-color: #e0f7fa; }
-  body.post main p.meta {
-    margin-top: 0.25em; }
-  body.post main blockquote, body.post main ul, body.post main ol {
-    margin-left: 1em; }
-  body.post main code, body.post main pre {
-    border: 1px solid #ddd;
-    background-color: #f5f5f5;
-    font-family: "UbuntuMono", "Courier New", Courier, monospace; }
-  body.post main code {
-    font-size: 0.8em;
-    padding: 0 0.25em; }
-  body.post main pre {
-    padding: 0.5em;
-    line-height: 1.1; }
-    body.post main pre code {
-      border: 0;
-      padding: 0; }
-  body.post main #post-share, body.post main #post-nav, body.post main #disqus_thread {
-    margin-top: 1.25em; }
-  body.post main #post-nav a.prev {
-    float: left; }
-  body.post main #post-nav a.next {
-    float: right; }
+  body.post main {
+    border-top-color: #00e5ff;
+    border-bottom-color: #00e5ff; }
+    body.post main p.meta {
+      margin-top: 0.25em; }
+    body.post main blockquote, body.post main ul, body.post main ol {
+      margin-left: 1em; }
+    body.post main code, body.post main pre {
+      border: 1px solid #ddd;
+      background-color: #f5f5f5;
+      font-family: "UbuntuMono", "Courier New", Courier, monospace; }
+    body.post main code {
+      font-size: 0.8em;
+      padding: 0 0.25em; }
+    body.post main pre {
+      padding: 0.5em;
+      line-height: 1.1; }
+      body.post main pre code {
+        border: 0;
+        padding: 0; }
+    body.post main #post-share, body.post main #post-nav, body.post main #disqus_thread {
+      margin-top: 1.25em; }
+    body.post main #post-nav a.prev {
+      float: left; }
+    body.post main #post-nav a.next {
+      float: right; }
 
 body.posts {
   background-color: #e0f7fa; }
-  body.posts main h2, body.posts main li span.date {
-    width: 350px; }
-  body.posts main h2 {
-    text-align: right; }
-  body.posts main li {
-    list-style-type: none; }
-    body.posts main li span.date {
-      display: inline-block;
-      text-align: right;
-      margin-right: 0.5em; }
+  body.posts main {
+    border-top-color: #00e5ff;
+    border-bottom-color: #00e5ff; }
+    body.posts main h2, body.posts main li span.date {
+      width: 350px; }
+    body.posts main h2 {
+      text-align: right; }
+    body.posts main li {
+      list-style-type: none; }
+      body.posts main li span.date {
+        display: inline-block;
+        text-align: right;
+        margin-right: 0.5em; }
 
 body.code {
   background-color: #f3e5f5; }
-  body.code main li {
-    margin-left: 1em; }
+  body.code main {
+    border-top-color: #d500f9;
+    border-bottom-color: #d500f9; }
+    body.code main li {
+      margin-left: 1em; }
 
 body.talks {
   background-color: #fff8e1; }
-  body.talks main li img {
-    float: left;
-    margin-top: 0.25em; }
-    body.talks main li img + div {
-      margin-left: 200px; }
+  body.talks main {
+    border-top-color: #ffc400;
+    border-bottom-color: #ffc400; }
+    body.talks main li img {
+      float: left;
+      margin-top: 0.25em; }
+      body.talks main li img + div {
+        margin-left: 200px; }
 
 footer {
   clear: both;
