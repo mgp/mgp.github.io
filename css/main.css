@@ -78,10 +78,10 @@ body.code main ul, body.talks main ul {
     body.code main ul li > div:first-child + div, body.talks main ul li > div:first-child + div {
       margin-left: 200px; }
 
-header nav ul li a.posts:hover, body.post header nav a.posts, body.posts header nav a.posts, header nav ul li a.code:hover, body.code header nav a.code, header nav ul li a.talks:hover, body.talks header nav a.talks, header nav ul li a.about:hover, body.about header nav a.about {
+header nav ul li a.writing:hover, body.post header nav a.writing, body.writing header nav a.writing, header nav ul li a.code:hover, body.code header nav a.code, header nav ul li a.talks:hover, body.talks header nav a.talks, header nav ul li a.about:hover, body.about header nav a.about {
   color: white; }
 
-header nav ul li a.posts:hover, body.post header nav a.posts, body.posts header nav a.posts {
+header nav ul li a.writing:hover, body.post header nav a.writing, body.writing header nav a.writing {
   background-color: #00e5ff; }
 
 header nav ul li a.code:hover, body.code header nav a.code {
@@ -169,18 +169,18 @@ body.post {
     body.post main #post-nav a.next {
       float: right; }
 
-body.posts {
+body.writing {
   background-color: #e0f7fa; }
-  body.posts main {
+  body.writing main {
     border-top-color: #00e5ff;
     border-bottom-color: #00e5ff; }
-    body.posts main h2, body.posts main li span.date {
+    body.writing main h2, body.writing main li span.date {
       width: 350px; }
-    body.posts main h2 {
+    body.writing main h2 {
       text-align: right; }
-    body.posts main li {
+    body.writing main li {
       list-style-type: none; }
-      body.posts main li span.date {
+      body.writing main li span.date {
         display: inline-block;
         text-align: right;
         margin-right: 0.5em; }

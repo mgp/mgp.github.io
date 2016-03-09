@@ -57,8 +57,8 @@ $orange-light: #fff3e0;
 $deep-orange-dark: #ff3d00;
 $deep-orange-light: #fbe9e7;
 
-$posts-nav-color: $cyan-dark;
-$posts-background-color: $cyan-light;
+$writing-nav-color: $cyan-dark;
+$writing-background-color: $cyan-light;
 $code-nav-color: $purple-dark;
 $code-background-color: $purple-light;
 $talks-nav-color: $amber-dark;
@@ -157,9 +157,9 @@ body {
 %nav-link-selected {
   color: white;
 }
-%nav-link-selected-posts {
+%nav-link-selected-writing {
   @extend %nav-link-selected;
-  background-color: $posts-nav-color;
+  background-color: $writing-nav-color;
 }
 %nav-link-selected-code {
   @extend %nav-link-selected;
@@ -198,8 +198,8 @@ header {
           color: $text-color;
         }
         &:hover {
-          &.posts {
-            @extend %nav-link-selected-posts;
+          &.writing {
+            @extend %nav-link-selected-writing;
           }
           &.code {
             @extend %nav-link-selected-code;
@@ -273,15 +273,15 @@ body.about {
 }
 
 body.post {
-  background-color: $posts-background-color;
+  background-color: $writing-background-color;
 
-  header nav a.posts {
-    @extend %nav-link-selected-posts;
+  header nav a.writing {
+    @extend %nav-link-selected-writing;
   }
 
   main {
-    border-top-color: $posts-nav-color;
-    border-bottom-color: $posts-nav-color;
+    border-top-color: $writing-nav-color;
+    border-bottom-color: $writing-nav-color;
 
     $code-font-size: 0.8em;
     $code-background-color: $light-gray;
@@ -346,16 +346,16 @@ body.post {
   }
 }
 
-body.posts {
-  background-color: $posts-background-color;
+body.writing {
+  background-color: $writing-background-color;
 
-  header nav a.posts {
-    @extend %nav-link-selected-posts;
+  header nav a.writing {
+    @extend %nav-link-selected-writing;
   }
 
   main {
-    border-top-color: $posts-nav-color;
-    border-bottom-color: $posts-nav-color;
+    border-top-color: $writing-nav-color;
+    border-bottom-color: $writing-nav-color;
 
     %date-column {
       width: 350px;
