@@ -1,1 +1,1 @@
-jekyll serve --watch --drafts --config=_config.yml,_local_config.yml
+jekyll serve --drafts --config=_config.yml,_local_config.yml

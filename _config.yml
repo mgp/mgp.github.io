@@ -1,7 +1,6 @@
 name: omg it's mgp!
 base_url: http://omgitsmgp.com
 markdown: redcarpet
-highlighter: pygments
 permalink: pretty
 
 enable_analytics: true

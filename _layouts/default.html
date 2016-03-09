@@ -10,7 +10,7 @@
     <link rel="alternate" href="/atom.xml" type="application/atom+xml" title="{{ site.name }}" />
   </head>
 
-  <body{% if page.class %} class="{{ page.class }}"{% endif %}>
+  <body{% if page.class %} class="{{ page.class }}"{% endif %}{% if layout.class %} class="{{ layout.class }}"{% endif %}>
     <header>
       <nav>
         <ul>
